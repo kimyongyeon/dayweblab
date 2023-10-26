@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>todo list</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+
+        }
+
+        table thead tr th {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        table tbody tr td {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<h1>Todo List</h1>
-<script>
-    fetch("/hello-api").then(r => r).then(j => console.log(j));
-</script>
+<div>
+    <table id="peopleTable">
+        <caption>인원 목록</caption>
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>나이</th>
+            <th>주소</th>
+            <th>직업</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+<script src="people.js"></script>
 </body>
 </html>
