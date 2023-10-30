@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+
+        }
+
+        table thead tr th {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        table tbody tr td {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div id="personList">
+    <table>
+        <caption>인원 목록</caption>
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>나이</th>
+            <th>주소</th>
+            <th>직업</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person, personStat : ${list}">
+            <td th:text="${personStat.count}">번호</td>
+            <td th:text="${person.name}">이름</td>
+            <td th:text="${person.age}">나이</td>
+            <td th:text="${person.address}">주소</td>
+            <td th:text="${person.job}">직업</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<button id="loadMore">더 보기</button>
+<script th:inline="javascript">
+    $(document).ready(function () {
+        var offset = 5; // 초기에 보여준 항목 수
+
+        $("#loadMore").click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/loadMore?offset=" + offset,
+                success: function (data) {
+                    data.forEach(function (person) {
+                        var newRow = $("<tr>");
+                        newRow.append("<td>" + ++offset + "</td>")
+                        newRow.append("<td>" + person.name + "</td>");
+                        newRow.append("<td>" + person.age + "</td>");
+                        newRow.append("<td>" + person.address + "</td>");
+                        newRow.append("<td>" + person.job + "</td>");
+                        $("#personList table tbody").append(newRow);
+                    });
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
