@@ -20,7 +20,7 @@ public class Member {
        return hiddenData;
    }
    void hiddenIntroduce(String name, String phone ,String addr){
-       System.out.println(fullAddress(addr) +" "+ "살고 있는" +" "+ name + "이며 " + "전화번호는" +" "+getHiddenPhone(phone,7)+ " 입니다");
+       System.out.println(fullAddress(addr) +" "+ "살고 있는" +" " + name + "이며 " + "전화번호는" +" "+getHiddenPhone(phone,7)+ " 입니다");
    }
 
 }
