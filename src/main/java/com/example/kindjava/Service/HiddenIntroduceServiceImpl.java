@@ -4,7 +4,7 @@ import com.example.kindjava.Model.Member;
 
 
 
-public class HiddenIntroduceServiceImpl implements HiddenIntroduceService {
+public class HiddenIntroduceServiceImpl extends AbstIntroduceService {
 
     String getHiddenPhone(Member member){
         String phone= member.getPhone();
@@ -15,6 +15,7 @@ public class HiddenIntroduceServiceImpl implements HiddenIntroduceService {
         }
         return hiddenData;
     }
+
 
     @Override
     public String hiddenIntroduce(Member member) {

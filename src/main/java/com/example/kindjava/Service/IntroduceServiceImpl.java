@@ -3,7 +3,7 @@ package com.example.kindjava.Service;
 import com.example.kindjava.Model.Member;
 
 
-public class IntroduceServiceImpl implements IntroduceService {
+public class IntroduceServiceImpl extends AbstIntroduceService {
     @Override
     public String introduce(Member member) {
         String name = member.getName();

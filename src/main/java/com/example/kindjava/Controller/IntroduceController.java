@@ -12,8 +12,9 @@ public class IntroduceController {
     IntroduceService introduceService = new IntroduceServiceImpl();
 
     String introduce() {
-        Member member = new Member("서동희", "01092001234", "서초구");
-        return introduceService.introduce(member);
+        Member member1 = Member.createMember("서동희", "01092001234", "서초구");
+//        Member member = new Member("서동희", "01092001234", "서초구");
+        return introduceService.introduce(member1);
     }
 
 

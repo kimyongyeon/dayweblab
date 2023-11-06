@@ -9,11 +9,15 @@ public class Member {
         return Loc.Kor + " " +address;
     }
 
-    public Member(String name, String phone, String addr){
+    private Member(String name, String phone, String addr){
         this.name = name;
         this.phone = phone;
         this.addr = fullAddress(addr);
     };
+
+    public static Member createMember(String name, String phone, String addr ) {
+        return new Member(name, phone, addr);
+    }
 
 
    public String getName(){

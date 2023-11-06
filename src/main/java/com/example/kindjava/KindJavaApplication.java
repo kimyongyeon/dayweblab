@@ -1,6 +1,8 @@
-package com.example.kindjava.Controller;
+package com.example.kindjava;
 
 
+import com.example.kindjava.Controller.HiddenIntroduceController;
+import com.example.kindjava.Controller.IntroduceController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
