@@ -1,4 +1,5 @@
-package com.example.kindjava;
+package com.example.kindjava.Controller;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +9,13 @@ public class KindJavaApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(KindJavaApplication.class, args);
-        Member member =new Member();
-        member.introduce("서동희","01000000000","강남구");
-        member.hiddenIntroduce("서동희","01099998888","강남구");
 
+        IntroduceController controller = new IntroduceController();
+        controller.introduce();
+
+
+        HiddenIntroduceController HController = new HiddenIntroduceController();
+        HController.introduce();
     }
 
 }
