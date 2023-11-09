@@ -1,4 +1,4 @@
-package main.java;
+package main.java.member;
 
 public abstract class Loc {
 
