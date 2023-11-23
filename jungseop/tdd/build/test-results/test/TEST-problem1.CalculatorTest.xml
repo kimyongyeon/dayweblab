@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem1.CalculatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-11-23T12:59:27" hostname="DESKTOP-P6QCKMT" time="0.015">
+  <properties/>
+  <testcase name="두 정수의 합이 기댓값과 다르다." classname="problem1.CalculatorTest" time="0.013"/>
+  <testcase name="두 정수의 합이 올바르게 반환되는지 확인한다." classname="problem1.CalculatorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
